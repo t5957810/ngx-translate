@@ -5,7 +5,7 @@ Angular版本：7.1.4.
 
 ## Online Demo 
 
-[https://t5957810.github.io/ngx-translate-demo/](https://t5957810.github.io/ngx-translate-demo/)
+
 
 
 
