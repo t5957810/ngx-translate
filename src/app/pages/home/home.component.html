@@ -1,0 +1,33 @@
+<div class="container" padding>
+  <div class="row">
+    <div class="col">
+      <mat-card>
+        <mat-card-header>
+          <div mat-card-avatar></div>
+          <mat-card-title><a href="https://edwardzou.blogspot.com/" target="_blank">{{ 'home.title' | translate }}</a></mat-card-title>
+          <mat-card-subtitle>
+            <p>{{ 'home.subtitle' | translate }}</p>
+          </mat-card-subtitle>
+        </mat-card-header>
+        <img
+          mat-card-image style="height: auto;"
+          src="https://2.bp.blogspot.com/-Qql8IBMVvsY/WkuO4MvKy_I/AAAAAAAAQyQ/GtR9yxpjPqg2TNFnONhZpC2yYLyOvc3uACLcBGAs/s1600/fuji-3840x2160-4k-hd-wallpaper-japan-travel-tourism-national-10326.jpg"/>
+        <mat-card-content>
+          <div class="row justify-content-center">
+                <div class="col">
+                    <p text-center *ngIf="isMobile$ | async; else des1">
+                      {{ 'home.content' | translate}}
+                    </p>
+                    <ng-template #des1>
+                      <p label>{{ 'home.content' | translate}}</p>
+                    </ng-template>
+                </div>
+          </div>  
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button>LIKE</button> <button mat-button>SHARE</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+</div>

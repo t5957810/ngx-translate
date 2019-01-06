@@ -1,0 +1,139 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'variables.scss';
+@import 'src/app/angular-material-theme/custom-theme.scss';
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+[pointer] {
+    cursor: pointer;
+}
+
+a {
+    color: #000;
+    transition-duration: .3s;
+
+    &:hover {
+        color: #4a8bfc;
+        text-decoration: none;
+    }
+}
+
+[margin] {
+    margin: $standard-width-size !important;
+}
+
+[margin-top] {
+    margin-top: $standard-width-size !important;
+}
+
+[margin-right] {
+    margin-right: $standard-width-size !important;
+}
+
+[margin-bottom] {
+    margin-bottom: $standard-width-size !important;
+}
+
+[margin-left] {
+    margin-left: $standard-width-size !important;
+}
+
+[no-margin] {
+    margin: 0px !important;
+}
+
+[padding] {
+    padding: $standard-width-size !important;
+}
+
+[padding-top] {
+    padding-top: $standard-width-size !important;
+}
+
+[padding-right] {
+    padding-right: $standard-width-size !important;
+}
+
+[padding-bottom] {
+    padding-bottom: $standard-width-size !important;
+}
+
+[padding-left] {
+    padding-left: $standard-width-size !important;
+}
+
+[no-padding] {
+    padding: 0px !important;
+}
+
+[view-text] {
+    color: #989898;
+    font-family: $standard-font;
+}
+
+[text-center],
+.text-center {
+    text-align: center !important;
+}
+
+[text-left],
+.text-left {
+    text-align: left !important;
+}
+
+[text-right],
+.text-right {
+    text-align: right !important;
+}
+
+[text-nowrap],
+.text-nowrap {
+    white-space: nowrap !important;
+}
+
+[label],
+.label,
+[label-required],
+.label-required {
+    font-weight: bold;
+    font-size: 17px;
+    font-family: $standard-font;
+    margin-bottom: 0.5rem;
+}
+
+[label-required]:before,
+.label-required:before {
+    content: "*";
+    color: red;
+}
+
+.flag {
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+    margin: 0 5px 0 0;
+}
+
+.countrylist-caption {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.flag-tw {
+    background-image: url('/assets/layout/images/language/taiwan.png');
+}
+
+.flag-us {
+    background-image: url('/assets/layout/images/language/us.png');
+}

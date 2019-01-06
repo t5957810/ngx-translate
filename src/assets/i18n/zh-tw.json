@@ -1,0 +1,14 @@
+{
+    "menu": {
+        "home": "首頁",
+        "feature": {
+            "name": "功能模組",
+            "form": "表單"
+        },
+        "language": "語言",
+        "languageList": {
+            "taiwanese": "繁體中文",
+            "english": "英文"
+        }
+    }
+}

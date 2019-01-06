@@ -1,0 +1,42 @@
+<mat-nav-list *ngIf="value" style="padding-top:0px;">
+  <mat-accordion>
+    <ng-container *ngFor="let item of value">
+      <a mat-list-item (click)="menu.toggle()" class="mat-list-item-border" 
+      *ngIf="item.subMenus.length == 0; else hasSubMenus" [routerLink]="item.actionUrl">
+        {{ item.display | translate }}
+      </a>
+      <ng-template #hasSubMenus>
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title m-f style="line-height: 30px;">
+              <span>{{ item.display | translate }}</span>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <ng-container *ngFor="let submenu of item.subMenus">
+            <a mat-list-item m-f (click)="menu.toggle()" [routerLink]="submenu.actionUrl">
+              {{ submenu.display | translate }}
+            </a>
+          </ng-container>
+        </mat-expansion-panel>
+      </ng-template>
+    </ng-container>
+
+
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title m-f style="line-height: 30px;">
+          <span padding-right>{{ 'menu.language' | translate }}</span>
+          <figure class="flag" [ngClass]="getCountryMap(currentLanguage)"></figure>
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <a mat-list-item m-f (click)="useLanguage('en')" (click)="menu.toggle()">
+        <figure class="flag flag-us"></figure>
+        <span class="countrylist-caption">{{ 'menu.languageList.english' | translate }}</span>
+      </a>
+      <a mat-list-item m-f (click)="useLanguage('zh-tw')" (click)="menu.toggle()">
+        <figure class="flag flag-tw"></figure>
+        <span class="countrylist-caption">{{ 'menu.languageList.taiwanese' | translate }}</span>
+      </a>
+    </mat-expansion-panel>
+  </mat-accordion>
+</mat-nav-list>
